@@ -1,0 +1,109 @@
+" Autoinstall vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall
+endif
+
+" Plugins via Vim-Plug
+call plug#begin('~/.vim/plugged')
+" Functional Plugins
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+
+" UI Plugins
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Syntax Highlighting Plugins
+Plug 'tmux-plugins/vim-tmux'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+" Linters
+Plug 'w0rp/ale'
+call plug#end()
+
+" Remove any trailing whitespace that is in the file
+autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+
+" Colorscheme
+filetype on
+syntax enable
+set background=dark
+colorscheme solarized
+
+" General Settings
+set nocompatible    " Disable backward compatibility with Vi
+set hidden          " Hide buffers instead of closing
+set lazyredraw      " Speed up on large files
+set number          " Show line numbers
+set backspace=2     " Backspace through anything in insert mode
+set conceallevel=0  " Do not conceal any characters
+set noesckeys       " No delays for escape
+set updatetime=250  " Quicker updates
+
+" General Mappings
+map <C-k> {
+map <C-j> }
+
+" Status Line
+set laststatus=2    " Always show status line
+set showcmd         " Always show current command
+
+" Indentation
+set expandtab       " Replace <Tab> with spaces
+set shiftround      " Round indent to multiple of 'shiftwidth' (for << and >>)
+set tabstop=4
+set shiftwidth=4
+
+" Search
+set incsearch       " Start searching before pressing enter
+set ignorecase      " Ignore case of letters
+set smartcase       " Override the 'ignorecase' when there is uppercase letters
+set hlsearch        " Search highlighting
+nnoremap <silent> <Leader><Esc> :nohlsearch<CR>
+
+" Buffer Control
+nmap <C-h> :bp<CR>
+nmap <C-l> :bn<CR>
+nmap <Leader>dd :bd<CR>
+
+" Explore Control
+nmap <Leader>fe :Vexplore<CR>
+
+" Spell Check
+nmap <Leader>sce :setlocal spell spelllang=en_us<CR>
+nmap <Leader>scd :set nospell<CR>
+
+" Airline Setup
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#hunks#enabled = 0
+
+" Fzf Setup
+nmap <Leader>ff :Files<CR>
+nmap <Leader>fg :GFiles?<CR>
+nmap <Leader>fl :Lines<CR>
+nmap <Leader>fb :Buffers<CR>
+let g:fzf_colors =
+    \ { 'fg':      ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'Normal'],
+    \ 'hl':      ['fg', 'Comment'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment'] }
+
+" Fugitive Setup
+nmap <Leader>gg :Gbrowse<CR>
