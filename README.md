@@ -1,6 +1,6 @@
 # curly-invention
 
-[jami's](www.jamiboy.com) development environment treasure chest.
+[jami's](http://www.jamiboy.com) development environment treasure chest.
 
 ## Dotfiles
 

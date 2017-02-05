@@ -13,4 +13,4 @@ export PATH=/usr/local/bin:$PATH
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 # Stuff I won't share
-source ~/workplace/adamant-turtle/dotfiles/bash_profile
+source ~/workplace/curly-invention/private/dotfiles/bash_profile
