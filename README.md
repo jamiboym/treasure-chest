@@ -10,8 +10,6 @@ The `dotfiles` folder contains the `.bash_profile`, `.vimrc`, and the `.tmux.con
 
 ## Initial Setup
 
-**Important:** If you're not me, you'll want to comment out the line in `bash_profile`.
-
 In its default configuration, [ag](#ag) and [core-utils](#core-utils) will be needed to be installed. Of course, these can be commented out from `bash_profile`.
 
 Running `vim` for the first time will check if [Vim-Plug](https://github.com/junegunn/vim-plug) will be needed to be downloaded, and an initial `:PlugInstall` will be invoked. **Note:** Version 8 is required for [ale](#ale), a linter plugin, to run.
@@ -32,7 +30,7 @@ There are 3 scripts under the `install` directory that automatically download an
 
 For all installations, ensure that `wget`, `make`, `g++`, `gcc`, and `tar` are on the machine.
 
-Post-installation, make sure to uncomment line 10 in `bash_profile`.
+Post-installation, make sure to adjust your `PATH` and `LD_LIBRARY_PATH` accordingly. There is a line that is commented out in `bash_profile` for this.
 
 ## Configurations
 
