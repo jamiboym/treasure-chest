@@ -5,9 +5,9 @@ eval `gdircolors ~/workplace/local/dircolors/dircolors.dark`
 # Vim as default editor
 export EDITOR=vim
 
-# Add to $PATH
-export PATH=/usr/local/bin:$PATH
-# export PATH=$HOME/workplace/local/bin:$PATH LD_LIBRARY_PATH=$HOME/workplace/local/lib:$LD_LIBRARY_PATH
+# Add to $PATH and $LD_LIBRARY_PATH
+export PATH=$HOME/workplace/local/bin:/usr/local/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/workplace/local/lib:$LD_LIBRARY_PATH
 
 # Fzf Setup
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'

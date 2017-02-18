@@ -28,8 +28,6 @@ There are 3 scripts under the `install` directory that automatically download an
 
 For all installations, ensure that `wget`, `make`, `g++`, `gcc`, and `tar` are on the machine.
 
-Post-installation, make sure to adjust your `PATH` and `LD_LIBRARY_PATH` accordingly. There is a line that is commented out in `bash_profile` for this.
-
 ## Configurations
 
 ### ag
