@@ -76,7 +76,7 @@ nmap <C-l> :bn<CR>
 nmap <Leader>dd :bd<CR>
 
 " Explore Control
-nmap <Leader>fe :Vexplore<CR>
+nmap <Leader>fe :Explore<CR>
 
 " Spell Check
 nmap <Leader>sce :setlocal spell spelllang=en_us<CR>
