@@ -1,6 +1,6 @@
 # GNU ls and dircolors, install with `brew install core-utils` on MacOS
 alias ls='gls --color=auto'
-eval `gdircolors ~/workplace/curly-invention/dircolors/dircolors.dark`
+eval `gdircolors ~/workplace/local/dircolors/dircolors.dark`
 
 # Vim as default editor
 export EDITOR=vim
@@ -13,4 +13,4 @@ export PATH=/usr/local/bin:$PATH
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 # Private Setup
-[ -f ~/workplace/curly-invention/private/dotfiles/bash_profile ] && source ~/workplace/curly-invention/private/dotfiles/bash_profile
+[ -f ~/workplace/local/dotfiles/bash_profile ] && source ~/workplace/local/dotfiles/bash_profile

@@ -6,8 +6,6 @@
 
 The `dotfiles` folder contains the `.bash_profile`, `.vimrc`, and the `.tmux.conf`. Running `make deploy` will create symbolic links to the home folder. Changes in the repo will reflect in the home folder, and vice versa. Running `make clean` will remove the deployed links.
 
-**Important:** The make file, and a few other stuff, assumes that this repository is in `~/workplace/curly-invention`.
-
 ## Initial Setup
 
 In its default configuration, [ag](#ag) and [core-utils](#core-utils) will be needed to be installed. Of course, these can be commented out from `bash_profile`.
