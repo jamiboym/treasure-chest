@@ -1,4 +1,4 @@
-# curly-invention
+# treasure-chest
 
 [jami's](http://www.jamiboy.com) development environment treasure chest.
 
