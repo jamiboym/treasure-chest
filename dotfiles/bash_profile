@@ -12,5 +12,8 @@ export LD_LIBRARY_PATH=$HOME/workplace/local/lib:$LD_LIBRARY_PATH
 # Fzf Setup
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
+# Git Completion Setup
+source ~/workplace/local/git-completion.bash
+
 # Private Setup
 [ -f ~/workplace/local/dotfiles/bash_profile ] && source ~/workplace/local/dotfiles/bash_profile
