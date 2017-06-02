@@ -75,6 +75,10 @@ nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
 nmap <Leader>dd :bd<CR>
 
+" Indentation Control
+nmap <Leader>i2 :set ts=2<CR>:set sw=2<CR>
+nmap <Leader>i4 :set ts=4<CR>:set sw=4<CR>
+
 " Explore Control
 nmap <Leader>fe :Explore<CR>
 
