@@ -8,7 +8,7 @@ The `dotfiles` folder contains the `.bash_profile`, `.vimrc`, and the `.tmux.con
 
 ## Initial Setup
 
-In its default configuration, [ag](#ag) and [core-utils](#core-utils) will be needed to be installed. Of course, these can be commented out from `bash_profile`.
+In its default configuration, [ag](#ag) and [coreutils](#coreutils) will be needed to be installed. Of course, these can be commented out from `bash_profile`.
 
 Running `vim` for the first time will check if [Vim-Plug](https://github.com/junegunn/vim-plug) will be needed to be downloaded, and an initial `:PlugInstall` will be invoked. **Note:** Version 8 is required for [ale](#ale), a linter plugin, to run.
 
@@ -38,8 +38,8 @@ For all installations, ensure that `wget`, `make`, `g++`, `gcc`, and `tar` are o
 
 `ale` is the linter used in the vim configuration. It requires version 8 to be used for asynchronous jobs. If vim 8 cannot be installed on the machine due to the lack of permissions, see [Local Executables](#local-executables). For more information, see [ale's github page](https://github.com/w0rp/ale).
 
-### core-utils
+### coreutils
 
-For **MacOS users**, `core-utils` brings `gls` and `gdircolors` to the system, allowing for customized, colored `ls` output. This can be installed with `brew` (`brew install core-utils`).
+For **MacOS users**, `coreutils` brings `gls` and `gdircolors` to the system, allowing for customized, colored `ls` output. This can be installed with `brew` (`brew install coreutils`).
 
-For **Linux users**, no installation is needed. Checkout the `linux-base` branch of the repo (`git checkout linux-base`) to use `ls` and `dircolors` instead of its `core-utils` counterpart.
+For **Linux users**, no installation is needed. Checkout the `linux-base` branch of the repo (`git checkout linux-base`) to use `ls` and `dircolors` instead of its `coreutils` counterpart.
