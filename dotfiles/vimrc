@@ -46,8 +46,10 @@ set lazyredraw      " Speed up on large files
 set number          " Show line numbers
 set backspace=2     " Backspace through anything in insert mode
 set conceallevel=0  " Do not conceal any characters
-set noesckeys       " No delays for escape
 set updatetime=250  " Quicker updates
+if !has('nvim')     " Options that don't exist for Neovim
+    set noesckeys   " No delays for escape
+endif
 
 " General Mappings
 map <C-k> {
