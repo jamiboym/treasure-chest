@@ -55,6 +55,9 @@ map <C-j> }
 set laststatus=2    " Always show status line
 set showcmd         " Always show current command
 
+" Sign Gutter
+highlight clear SignColumn
+
 " Indentation
 set expandtab       " Replace <Tab> with spaces
 set shiftround      " Round indent to multiple of 'shiftwidth' (for << and >>)
