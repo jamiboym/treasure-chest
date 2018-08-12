@@ -1,4 +1,0 @@
-[submodule "private"]
-	path = private
-	url = https://github.com/jamiboy16/adamant-turtle.git
-	ignore = dirty
