@@ -8,11 +8,9 @@ The `dotfiles` folder contains the `.bash_profile`, `.vimrc`, and the `.tmux.con
 
 ## Initial Setup
 
-In its default configuration, [ag](#ag) and [coreutils](#coreutils) will be needed to be installed. Of course, these can be commented out from `bash_profile`.
-
 Running `vim` for the first time will check if [Vim-Plug](https://github.com/junegunn/vim-plug) will be needed to be downloaded, and an initial `:PlugInstall` will be invoked. **Note:** Version 8 is required for [ale](#ale), a linter plugin, to run.
 
-Running `tmux` will install [tpm](https://github.com/tmux-plugins/tpm) on its initial execution. To install the rest of the plugins, press `<prefix> + I`. **Note:** `tmux` will fail to run if the executable `reattach-to-user-namespace` is not installed, possibly through `brew`. Otherwise, this line can be commented out from `.tmux.conf`
+Running `tmux` will install [tpm](https://github.com/tmux-plugins/tpm) on its initial execution. To install the rest of the plugins, press `<prefix> + I`.
 
 ## Terminal
 
@@ -21,25 +19,3 @@ The configurations assume that the terminal is using [solarized](http://ethansch
 ## Branches
 
 Since the dotfiles are symbolically linked to the repository, they can easily be switched by changing branches. This allows for setting up different profiles for different machines, or wanting to try something out. The main branches are `master`, meant for MacOS deployments, and `linux-base`, meant for Linux deployments.
-
-## Local Executables
-
-There are 3 scripts under the `install` directory that automatically download and install core tools for the development environment.
-
-For all installations, ensure that `wget`, `make`, `g++`, `gcc`, and `tar` are on the machine.
-
-## Configurations
-
-### ag
-
-`ag` is used for [fzf](https://github.com/junegunn/fzf.vim) in the vim configuration. If it cannot be installed on the machine due to the lack of permissions, see [Local Executables](#local-executables). For more information, visit [ag's github page](https://github.com/ggreer/the_silver_searcher).
-
-### ale
-
-`ale` is the linter used in the vim configuration. It requires version 8 to be used for asynchronous jobs. If vim 8 cannot be installed on the machine due to the lack of permissions, see [Local Executables](#local-executables). For more information, see [ale's github page](https://github.com/w0rp/ale).
-
-### coreutils
-
-For **MacOS users**, `coreutils` brings `gls` and `gdircolors` to the system, allowing for customized, colored `ls` output. This can be installed with `brew` (`brew install coreutils`).
-
-For **Linux users**, no installation is needed. Checkout the `linux-base` branch of the repo (`git checkout linux-base`) to use `ls` and `dircolors` instead of its `coreutils` counterpart.

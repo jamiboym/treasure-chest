@@ -1,19 +1,5 @@
-# GNU ls and dircolors, install with `brew install core-utils` on MacOS
-alias ls='gls --color=auto'
-eval `gdircolors ~/workplace/local/dircolors/dircolors.dark`
+# Colored ls
+alias ls='ls -G'
 
 # Vim as default editor
 export EDITOR=vim
-
-# Add to $PATH and $LD_LIBRARY_PATH
-export PATH=$HOME/workplace/local/bin:/usr/local/bin:$PATH
-export LD_LIBRARY_PATH=$HOME/workplace/local/lib:$LD_LIBRARY_PATH
-
-# Fzf Setup
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
-# Git Completion Setup
-source ~/workplace/local/git-completion.bash
-
-# Private Setup
-[ -f ~/workplace/local/dotfiles/bash_profile ] && source ~/workplace/local/dotfiles/bash_profile

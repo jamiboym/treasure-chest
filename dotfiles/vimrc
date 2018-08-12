@@ -11,12 +11,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 
 " UI Plugins
-Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -47,9 +45,7 @@ set number          " Show line numbers
 set backspace=2     " Backspace through anything in insert mode
 set conceallevel=0  " Do not conceal any characters
 set updatetime=250  " Quicker updates
-if !has('nvim')     " Options that don't exist for Neovim
-    set noesckeys   " No delays for escape
-endif
+set noesckeys   " No delays for escape
 
 " General Mappings
 map <C-k> {
@@ -77,26 +73,15 @@ nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
 nmap <Leader>dd :bd<CR>
 
-" Indentation Control
-nmap <Leader>i2 :set ts=2<CR>:set sw=2<CR>
-nmap <Leader>i4 :set ts=4<CR>:set sw=4<CR>
-
 " Explore Control
 nmap <Leader>fe :Explore<CR>
 
-" Spell Check
-nmap <Leader>sce :setlocal spell spelllang=en_us<CR>
-nmap <Leader>scd :set nospell<CR>
-
 " Airline Setup
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#hunks#enabled=0
 
 " Fzf Setup
 nmap <Leader>ff :Files<CR>
-nmap <Leader>fg :GFiles?<CR>
-nmap <Leader>fl :Lines<CR>
-nmap <Leader>fb :Buffers<CR>
 let g:fzf_colors =
     \ { 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
@@ -110,6 +95,3 @@ let g:fzf_colors =
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
     \ 'header':  ['fg', 'Comment'] }
-
-" Fugitive Setup
-nmap <Leader>gg :Gbrowse<CR>
