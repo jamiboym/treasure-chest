@@ -18,6 +18,7 @@ Plug 'tpope/vim-surround'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mhinz/vim-signify'
 
 " Syntax Highlighting Plugins
 Plug 'tmux-plugins/vim-tmux'
