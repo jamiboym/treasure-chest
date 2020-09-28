@@ -62,8 +62,8 @@ highlight clear SignColumn
 " Indentation
 set expandtab       " Replace <Tab> with spaces
 set shiftround      " Round indent to multiple of 'shiftwidth' (for << and >>)
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 " Search
 set incsearch       " Start searching before pressing enter
@@ -79,6 +79,7 @@ nmap <Leader>dd :bd<CR>
 
 " Explore Control
 nmap <Leader>fe :Explore<CR>
+let g:netrw_liststyle=3
 
 " Airline Setup
 let g:airline#extensions#tabline#enabled=1
@@ -86,16 +87,3 @@ let g:airline#extensions#hunks#enabled=0
 
 " Fzf Setup
 nmap <Leader>ff :Files<CR>
-let g:fzf_colors =
-    \ { 'fg':      ['fg', 'Normal'],
-    \ 'bg':      ['bg', 'Normal'],
-    \ 'hl':      ['fg', 'Comment'],
-    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-    \ 'hl+':     ['fg', 'Statement'],
-    \ 'info':    ['fg', 'PreProc'],
-    \ 'prompt':  ['fg', 'Conditional'],
-    \ 'pointer': ['fg', 'Exception'],
-    \ 'marker':  ['fg', 'Keyword'],
-    \ 'spinner': ['fg', 'Label'],
-    \ 'header':  ['fg', 'Comment'] }
