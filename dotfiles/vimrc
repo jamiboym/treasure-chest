@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 
 " UI Plugins
@@ -22,11 +21,6 @@ Plug 'mhinz/vim-signify'
 
 " Syntax Highlighting Plugins
 Plug 'tmux-plugins/vim-tmux'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-" Linters
-Plug 'w0rp/ale'
 call plug#end()
 
 " Remove any trailing whitespace that is in the file
