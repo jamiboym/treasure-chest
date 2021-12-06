@@ -8,6 +8,7 @@ deploy-tmux:
 
 deploy-vim:
 	ln -s $(ROOT_DIR)dotfiles/vimrc ~/.vimrc
+	ln -s $(ROOT_DIR)dotfiles/gvimrc ~/.gvimrc
 
 deploy-bash:
 	ln -s $(ROOT_DIR)dotfiles/bash_profile ~/.bash_profile

@@ -1,0 +1,5 @@
+" GUI Options
+set lines=24
+set columns=80
+set guioptions=
+set guifont=Monaco:h14
