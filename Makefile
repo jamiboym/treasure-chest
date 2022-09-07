@@ -16,4 +16,4 @@ deploy-bash:
 deploy: confirmation deploy-tmux deploy-vim deploy-bash
 
 clean: confirmation
-	rm ~/.vimrc ~/.bash_profile ~/.tmux.conf
+	rm ~/.vimrc ~/.gvimrc ~/.bash_profile ~/.tmux.conf

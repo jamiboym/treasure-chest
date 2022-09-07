@@ -46,10 +46,6 @@ set conceallevel=0  " Do not conceal any characters
 set updatetime=250  " Quicker updates
 set noesckeys   " No delays for escape
 
-" General Mappings
-map <C-k> {
-map <C-j> }
-
 " Status Line
 set laststatus=2    " Always show status line
 set showcmd         " Always show current command
